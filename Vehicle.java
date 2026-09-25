@@ -1,10 +1,9 @@
-
 public class Vehicle {
 
     String brand;
     String model;
     int year;
-
+    
     public Vehicle(String brand, String model, int year) {
         this.brand = brand;
         this.model = model;
@@ -22,5 +21,4 @@ public class Vehicle {
     boolean isVintage() {
         return calculateAge() > 25;
     }
-    
 }
