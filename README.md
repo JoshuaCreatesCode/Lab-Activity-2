@@ -1,4 +1,6 @@
 Lab-Activity-2
+
+
 Activity - Design a Class IT-OOPROG21 | Asynchronous | Classes & Objects Format: Independent work, no live class meeting Deadline: [instructor to fill in] Submission: Push to GitHub, paste your repository link in the Submission Tracker Questions: Post in the class group chat
 
 The Task Design a Vehicle class with 3 fields and 3 methods. Fields brand (String) model (String) year (int)
