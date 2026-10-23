@@ -23,11 +23,3 @@ The project shows **runtime polymorphism** through method overriding. Each subcl
 - Updated the truck example to a 2020 Mitsubishi Fuso Fighter with 8 tons of cargo capacity.
 - Removed the method-overloading demonstration from `Main.java` so it focuses on runtime polymorphism.
 
-## Run
-
-Compile and run from the project directory:
-
-```bash
-javac Vehicle.java Car.java Truck.java Motorcycle.java Main.java
-java Main
-```
