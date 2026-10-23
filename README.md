@@ -1,45 +1,25 @@
-#Lab Activity 4 - Encapsulation
+refactor-polymorphism
+# Lab Activity 1: Polymorphism
 
-Joshua Bontuyan M.  BSIT-2A
+## IT-OOPROG21 — Semi-Finals
 
-CONSOLE OUTPUT
+This project demonstrates object-oriented programming in Java using a base `Vehicle` class and three vehicle subclasses: `Car`, `Truck`, and `Motorcycle`.
 
-=== Vehicle 1 ===
-Toyota Vios (2022)
-Age: 4
-Vintage: false
-Brand: Toyota
-Model: Vios
-Year: 2022
+## Polymorphism
 
-=== Vehicle 2 ===
-Ford Ranger (2021)
-Age: 5
-Vintage: false
-Brand: Ford
-Model: Ranger
-Year: 2021
+The project shows **runtime polymorphism** through method overriding. Each subclass provides its own `startEngine()` and `displayInfo()` methods. In `Main.java`, the objects are stored in a `Vehicle` array; calling these methods on each `Vehicle` reference runs the implementation belonging to that object's actual class.
 
-=== Vehicle 3 ===
-Mitsubishi Montero (2022)
-Age: 4
-Vintage: false
-Brand: Mitsubishi
-Model: Montero
-Year: 2022
+## Classes and features
 
-=== setYear Tests ===
-setYear(2000): true
-Year: 2000
-Age: 26
-Vintage: true
-setYear(1885): false
-Year: 2000
-setYear(2027): false
-Year: 2000
+- `Vehicle` stores the brand, model, and year, and provides shared vehicle behavior.
+- `Car` adds the number of doors.
+- `Truck` adds cargo capacity and a six-wheel configuration.
+- `Motorcycle` adds engine size in cubic centimeters.
+- `Main` creates one car, one motorcycle, and one truck, then demonstrates their overridden methods.
 
-=== Invalid Constructor Tests ===
-New vehicle with year 1885
-Initial year: 2026
-New vehicle with year 2027
-Initial year: 2026
+## Recent changes
+
+- Added `startEngine()` to `Vehicle` and overrode it in each subclass.
+- Added `displayInfo()` overrides to show each vehicle's additional details.
+- Updated the truck example to a 2020 Mitsubishi Fuso Fighter with 8 tons of cargo capacity.
+- Removed the method-overloading demonstration from `Main.java` so it focuses on runtime polymorphism.

@@ -39,6 +39,10 @@ public class Vehicle {
         System.out.println(brand + " " + model + " (" + year + ")");
     }
 
+    public void startEngine() {
+        System.out.println(brand + " " + model + ": engine started.");
+    }
+
     public int calculateAge() {
         return 2026 - year;
     }
