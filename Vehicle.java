@@ -43,15 +43,6 @@ public class Vehicle {
         System.out.println(brand + " " + model + ": engine started.");
     }
 
-    public void drive(int kilometers) {
-        System.out.println(brand + " " + model + " drives " + kilometers + " km.");
-    }
-
-    public void drive(int kilometers, String destination) {
-        System.out.println(brand + " " + model + " drives " + kilometers
-                + " km to " + destination + ".");
-    }
-
     public int calculateAge() {
         return 2026 - year;
     }
