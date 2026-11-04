@@ -1,25 +1,27 @@
-refactor-polymorphism
-# Lab Activity 1: Polymorphism
+Lab Activity 2: Abstraction
 
-## IT-OOPROG21 — Semi-Finals
+IT-OOPROG21 — Semi-Finals
 
-This project demonstrates object-oriented programming in Java using a base `Vehicle` class and three vehicle subclasses: `Car`, `Truck`, and `Motorcycle`.
+This project demonstrates object-oriented programming in Java using abstraction. It shows how abstract classes and methods can define common behaviors while allowing subclasses to provide their own specific implementations.
 
-## Polymorphism
+Abstraction
 
-The project shows **runtime polymorphism** through method overriding. Each subclass provides its own `startEngine()` and `displayInfo()` methods. In `Main.java`, the objects are stored in a `Vehicle` array; calling these methods on each `Vehicle` reference runs the implementation belonging to that object's actual class.
+The project demonstrates abstraction through an abstract Vehicle class. The base class defines common vehicle properties and abstract methods that must be implemented by its subclasses.
 
-## Classes and features
+The Car, Truck, and Motorcycle classes extend the Vehicle class and provide their own implementations of the required methods. In Main.java, objects of these subclasses are created and used to demonstrate how abstraction works in Java.
 
-- `Vehicle` stores the brand, model, and year, and provides shared vehicle behavior.
-- `Car` adds the number of doors.
-- `Truck` adds cargo capacity and a six-wheel configuration.
-- `Motorcycle` adds engine size in cubic centimeters.
-- `Main` creates one car, one motorcycle, and one truck, then demonstrates their overridden methods.
+Classes and Features
 
-## Recent changes
+* Vehicle – An abstract base class that stores the brand, model, and year, and defines common vehicle behavior.
+* Car – Extends Vehicle and adds the number of doors.
+* Truck – Extends Vehicle and adds cargo capacity and a six-wheel configuration.
+* Motorcycle – Extends Vehicle and adds engine size in cubic centimeters.
+* Main – Creates a car, motorcycle, and truck to demonstrate abstraction.
 
-- Added `startEngine()` to `Vehicle` and overrode it in each subclass.
-- Added `displayInfo()` overrides to show each vehicle's additional details.
-- Updated the truck example to a 2020 Mitsubishi Fuso Fighter with 8 tons of cargo capacity.
-- Removed the method-overloading demonstration from `Main.java` so it focuses on runtime polymorphism.
+Recent Changes
+
+* Converted the Vehicle class into an abstract class.
+* Added abstract methods to define common vehicle behaviors.
+* Implemented the required abstract methods in Car, Truck, and Motorcycle.
+* Applied inheritance to share common vehicle properties and behaviors.
+* Updated Main.java to demonstrate abstraction using the vehicle subclasses.
