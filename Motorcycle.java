@@ -5,11 +5,23 @@ public class Motorcycle extends Vehicle {
         super(brand, model, year);
         this.engineCC = engineCC;
     }
-
+    
     @Override
-    public void startEngine() {
-        System.out.println(getBrand() + " " + getModel() + " (Motorcycle): engine starts with a kick/electric start.");
-    }
+    public  void moveForward(){
+      System.out.println("A motor moves forward");
+    };
+   @Override
+   public  void moveBackwards(){
+    System.out.println("A motor moves backward");
+    };
+   @Override
+   public  void moveLeft(){
+    System.out.println("A motor moves left");
+   };
+   @Override
+   public  void moveRight(){
+    System.out.println("A motor moves right");
+   };
 
     @Override
     public void displayInfo() {

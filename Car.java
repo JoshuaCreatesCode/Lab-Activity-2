@@ -1,19 +1,33 @@
 public class Car extends Vehicle {
-    private int doors;
+   private int doors;
+    
+   public Car(String brand,String model, int year, int doors) {
+    super(brand, model, year);
+    this.doors = doors;
+   }
+   
+   @Override
+public  void moveForward(){
+    System.out.println("A car moves forward");
+};
+@Override
+public  void moveBackwards(){
+    System.out.println("A car moves backward");
+};
+@Override
+public  void moveLeft(){
+    System.out.println("A car moves left");
+};
+@Override
+public  void moveRight(){
+    System.out.println("A car moves right");
+};
 
-    public Car(String brand, String model, int year, int doors) {
-        super(brand, model, year);
-        this.doors = doors;
-    }
-
-    @Override
-    public void startEngine() {
-        System.out.println(getBrand() + " " + getModel() + " (Car): engine starts with a push-button ignition.");
-    }
-
-    @Override
+ @Override 
     public void displayInfo() {
         super.displayInfo();
+
         System.out.println("Type: Car, Doors: " + doors);
+
     }
 }
