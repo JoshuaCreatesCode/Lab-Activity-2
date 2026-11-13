@@ -1,18 +1,49 @@
 public class Main {
-    public static void main(String[] args) {
-        Vehicle car = new Car("Toyota", "Vios", 2022, 4);
-        Vehicle motorcycle = new Motorcycle("Yamaha", "NMAXX 155", 2023, 155);
 
-        Vehicle truck = new Truck("Mitshubishi", "Fuso Fighter", 2020, 8);
+	public static void printDetails(Vehicle vehicle){
+			vehicle.displayInfo();
+			vehicle.moveForward();
+			vehicle.moveBackwards();
+			vehicle.moveLeft();
+			vehicle.moveRight();
+			System.out.println(" ");
+			
+		}
+		
+		public static void performService(Serviceable item){
+			item.service();
+		}
 
-        Vehicle[] vehicles = {car, motorcycle, truck};
+	public static void main(String[] args) {
 
-        System.out.println("=== Runtime polymorphism (method overriding) ===");
-        for (Vehicle v : vehicles) {
-            v.displayInfo();
-            v.startEngine();
-            System.out.println();
-        }
+		Serviceable car = new Car("Toyota", "Corolla", 2022, 4);
+		Serviceable motor = new Motorcycle("Yamaha", "R15M", 2023, 155);
+		Serviceable truck = new Truck("Isuzu", "Elf", 2021, 6);
+		Serviceable printer = new Printer();
 
-    }
+		Vehicle[] vehicles = {
+			new Car("Toyota", "Corolla", 2022, 4),
+			new Motorcycle("Yamaha", "R15M", 2023, 155),
+			new Truck("Isuzu", "Elf", 2021, 6)
+		};
+		
+		for(Vehicle currentVehicle: vehicles){
+			printDetails(currentVehicle);
+		}
+
+			Serviceable[] service = {
+			car,
+			motor,
+			truck,
+			printer
+		};
+
+		System.out.println(" ");
+		
+		//Loop for serviceable
+		for(Serviceable currentService: service){
+			performService(currentService);
+		}
+
+}
 }

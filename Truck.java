@@ -1,24 +1,36 @@
-public class Truck extends Vehicle {
-    private double cargoCapacityTons;
-    private int wheels = 6;
+public class Truck extends Vehicle implements Serviceable {
+    private int numberOfWheels;
 
-    public Truck(String brand, String model, int year, double cargoCapacityTons) {
+    public Truck(String brand, String model, int year, int numberOfWheels) {
         super(brand, model, year);
-        this.cargoCapacityTons = cargoCapacityTons;
-    }
-
-    public int getWheels() {
-        return wheels;
+        this.numberOfWheels = numberOfWheels;
     }
 
     @Override
-    public void startEngine() {
-        System.out.println(getBrand() + " " + getModel() + " (Truck): diesel engine starts with a deep rumble.");
+    public  void moveForward(){
+         System.out.println("A truck moves forward");
+    };
+    @Override
+    public  void moveBackwards(){
+          System.out.println("A truck moves backward");
+   };
+    @Override
+    public  void moveLeft(){
+          System.out.println("A truck moves left");
+   };
+    @Override
+    public  void moveRight(){
+          System.out.println("A truck moves right");
+   };
+
+    @Override
+    public void service() {
+        System.out.println("Truck: Inspect cargo brakes.");
     }
 
     @Override
     public void displayInfo() {
         super.displayInfo();
-        System.out.println("Type: Truck, Wheels: " + wheels + ", Cargo Capacity: " + cargoCapacityTons + " tons");
+        System.out.println("Type: Truck, Wheels: " + numberOfWheels + " wheels");
     }
 }
