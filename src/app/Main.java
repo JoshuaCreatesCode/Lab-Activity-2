@@ -1,3 +1,12 @@
+package app;
+
+import vehicles.Car;
+import vehicles.Motorcycle;
+import vehicles.Truck;
+import vehicles.Vehicle;
+import devices.Printer;
+import contracts.Serviceable;
+
 public class Main {
 
 	public static void printDetails(Vehicle vehicle){
